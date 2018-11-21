@@ -35,14 +35,18 @@
    font-size:18px;
    padding-bottom:10px;
    padding-top:10px;
-   border-top-style:solid;
-  border-top-width:0px;
    border-bottom-style:solid;
   border-bottom-width:1px;
+   border-bottom-color: #636060 !important;
   background-color:#eeeeee !important;
    min-height:30px;
       }
-   
+   .border-top{
+    border-top-width: 1px !important;
+    border-top-style: solid !important; 
+    border-top-color: #636060 !important;
+
+   }
    .widget-title span{
    margin-top:15px;
    margin-left:30px;
@@ -52,9 +56,19 @@
    padding-right: 0px;
    padding-left: 0px;
    }
-
+   .card-body{
+    border:none;
+   }
    .site-filter {
    display:none;
+   }
+   .sitefilter{
+     border-right-width: 1px !important;
+    border-right-color: #636060 !important;
+      border-right-style:solid !important;
+      border-bottom-width: 1px;
+    border-bottom-color: #636060 !important;
+      border-bottom-style:solid !important;
    }
    input[type="checkbox"] + label, input[type="radio"] + label {
     margin-left: 40px;
@@ -99,3 +113,9 @@
    </div>
 </div>
 <?php get_footer( 'shop' );?>
+<script type="text/javascript">
+  
+  for (y=1;y<5;y++){
+ document.getElementsByClassName("widget-title")[y].classList.add("border-top");}
+
+</script>
